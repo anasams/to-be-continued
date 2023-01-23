@@ -1,0 +1,54 @@
+/* you have to put style.css after base.css in html file if you want it to overwrite the base.css */
+
+@font-face {
+    font-family: Inter;
+    font-weight: 400;
+    src: url(inter-var.woff2);
+}
+
+@keyframes animate-type {
+    0%  {
+        /* transform: scale(1, 1);
+        transform-origin: 0 0; */
+        font-variation-settings: "wght" 400, "slnt" 0;
+        letter-spacing: 0;
+    }
+
+    100% {
+        /* transform: scale(1.5, 1);
+        transform-origin: 0 0; */
+        font-variation-settings: "wght" 900, "slnt" -8;
+        letter-spacing: 5px;
+    }
+}
+
+body {
+    font-family: Inter;
+    font-size: 24px;
+    line-height: 1.5;
+    background-color: rgb(255, 255, 255);
+    background-image: url(background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    height: 100vh;
+    color: #000;
+}
+
+header {
+    position: fixed;
+    top: 64px;
+    left: 64px;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1;
+    /*font-style: italic;*/
+    animation: animate-type 2.5s infinite alternate;
+}
+
+
+footer {
+    position: fixed;
+    bottom: 64px;
+    left: 64px;
+}
